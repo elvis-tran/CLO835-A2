@@ -1,0 +1,21 @@
+# TODO: a Deployment that runs 3 replicas of YOUR image; the container serves on port 8080.
+# Docs: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: # TODO
+spec:
+  replicas: # TODO
+  selector:
+    matchLabels:
+      app: # TODO
+  template:
+    metadata:
+      labels:
+        app: # TODO
+    spec:
+      containers:
+        - name: # TODO
+          image: # TODO  e.g. <your-dockerhub-username>/<repo>:0.2
+          ports:
+            - containerPort: 8080

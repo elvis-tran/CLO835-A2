@@ -36,13 +36,13 @@ Then check it: `curl http://localhost:8080` → `Hello world from the CLO835 cla
 
 Each starter has a clearly-marked `MESSAGE`/`message` constant. **To release version 0.3, edit that one line** to include your student ID, commit, and let the pipeline build the new image.
 
-## What YOU must add (this is the graded work)
+## What YOU must complete (this is the graded work)
 
-The starters contain **only the application code**. You write the rest:
+Skeleton **placeholder** files are provided — fill in the `TODO`s. They intentionally do **not** contain the answers:
 
-1. **`Dockerfile`** — builds your chosen app into an image that serves on port 8080.
-2. **`.github/workflows/…yml`** — a GitHub Actions workflow that, on merge to `master`, logs in to Docker Hub and builds + pushes the image tagged with the version (`0.2`) and the commit SHA.
-3. **Kubernetes manifests** — `deployment.yaml` (3 replicas, `apps/v1`) and `service.yaml` (NodePort) for your kind cluster.
+1. **`Dockerfile`** — build your chosen app into an image that serves on port 8080.
+2. **`.github/workflows/docker.yml`** — on merge to `master`, log in to Docker Hub and build + push the image tagged with the version (`0.2`) and the commit SHA.
+3. **`k8s/deployment.yaml`** and **`k8s/service.yaml`** — a 3-replica Deployment (`apps/v1`) and a NodePort Service for your kind cluster.
 
 See the assignment handout for the full requirements, recommended flow, and grade breakdown.
 

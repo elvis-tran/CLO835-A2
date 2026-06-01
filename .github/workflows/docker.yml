@@ -1,0 +1,17 @@
+# TODO: Build your image and push it to Docker Hub automatically on every merge to master.
+# Use the repository secrets DOCKERHUB_USERNAME and DOCKERHUB_TOKEN — do NOT hard-code them.
+name: Build and Push to Docker Hub
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      # TODO: check out the code
+      # TODO: log in to Docker Hub
+      # TODO: build from your Dockerfile and push the image,
+      #       tagged with the app version (e.g. 0.2) AND the commit SHA
+      - run: echo "TODO: replace this with your build-and-push steps"
