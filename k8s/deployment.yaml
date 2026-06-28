@@ -14,21 +14,19 @@ spec:
     spec:
       containers:
         - name: clo835-a2-container
-          #Attempted Template Pattern but it did not work. I will use the image name directly for now.
-          image: elvistrann7/clo835-assignment2:0.2
+          #Tried to implement a Template pattern but it was not working, so I just hardcoded the image version to 0.3
+          image: elvistrann7/clo835-assignment2:0.3
           ports:
             - containerPort: 8080
-          #The path name comes from the Program.cs file
           livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
-          #The path name comes from the Program.cs file
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
           readinessProbe:
-          httpGet:
-            path: /readyz
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
+            httpGet:
+              path: /readyz
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
