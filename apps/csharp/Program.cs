@@ -6,8 +6,7 @@ using System.Net;
 using System.Text;
 
 const string Version = "0.2";
-const string StudentId = "065743114";
-const string Message = $"Hello world from the CLO835 class and {StudentId}!";
+const string Message = "Hello world from the CLO835 class!";
 
 var listener = new HttpListener();
 listener.Prefixes.Add("http://*:8080/");
