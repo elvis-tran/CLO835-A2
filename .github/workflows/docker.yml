@@ -25,12 +25,3 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/clo835-assignment2:0.2
             ${{ secrets.DOCKERHUB_USERNAME }}/clo835-assignment2:${{ github.sha }}
-
-      - name: Deploy to Kubernetes with secrets
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-        run: |
-          envsubst < k8s/deployment.yaml > k8s/deployment.rendered.yaml
-          
-          kubectl apply -f k8s/deployment.rendered.yaml
-          kubectl apply -f k8s/service.yaml

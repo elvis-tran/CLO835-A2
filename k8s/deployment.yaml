@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: clo835-a2-container
-          #Template Pattern, will be filled at runtime with the value of DOCKERHUB_USERNAME secret
-          image: ${DOCKERHUB_USERNAME}/clo835-assignment2:0.2
+          #Attempted Template Pattern but it did not work. I will use the image name directly for now.
+          image: elvistrann7/clo835-assignment2:0.2
           ports:
             - containerPort: 8080
           #The path name comes from the Program.cs file
